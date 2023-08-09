@@ -78,10 +78,21 @@ function love.update(dt)
     end
 end
 
+local dots = 0
+local time = 0
+
 function love.draw()
     love.graphics.polygon("fill", verticesquad)
     
     love.graphics.line(verticeslines[1], verticeslines[2], verticeslines[3], verticeslines[4])
     love.graphics.line(verticeslines[5], verticeslines[6], verticeslines[7], verticeslines[8])
     love.graphics.line(verticeslines[9], verticeslines[10], verticeslines[11], verticeslines[12])
+
+    love.graphics.print("Loading" .. string.rep(".", dots), 275, 150)
+    if time == 0 then
+        dots = (dots + 1)%5
+        time = time + 1
+    else
+        time = (time + 1)%15
+    end
 end
