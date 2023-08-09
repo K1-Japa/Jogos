@@ -4,7 +4,6 @@ end
 
 local mode = 0
 local verticeslines = {75, 75, 75, 75, 525, 75, 525, 75, 300, 300, 300, 300}
--- local verticeslines = {75, 75, 525, 75, 300, 300}
 local verticesquad = {50, 50, 100, 50, 100, 100, 50, 100}
 local speed = 5
 
